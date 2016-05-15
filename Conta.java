@@ -1,9 +1,11 @@
 abstract public class Conta {
-    protected String nome;
+    protected String nome;  //THIS
     protected String endereco;
     protected int cpf,data;
-    protected float saldo;
-    public Conta(String nome, String endereco, int cpf, int data, float saldo){
+    protected double saldo;
+    public Conta(String nome, String endereco, int cpf, int data, double saldo){
+      // Nome pode ser o parametro ou a váriavel da classe Conta.
+      // Quando chama o this, está chamando o Nome dá classe não do parametro desse metodo
       this.nome = nome;
       this.endereco = endereco;
       this.cpf = cpf;
@@ -22,10 +24,10 @@ abstract public class Conta {
     public int getData(){
         return(data);
     }
-    public float getSaldo(){
+    public double getSaldo(){
         return(saldo);
     }
-    public boolean sacar(float valor){
+    public boolean sacar(double valor){
       if (valor > saldo) {
         return false;
       }
