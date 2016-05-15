@@ -8,6 +8,7 @@ public class ContaEspecial extends Conta {
     if(valor > (super.saldo + limite)){
       return false;
     }
+    super.saldo -= valor;
     return true;
   }
 }
